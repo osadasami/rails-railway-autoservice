@@ -70,3 +70,10 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem "vanilla_nested", "~> 1.6"
+gem "discard", "~> 1.2"
+gem "slim-rails", "~> 3.5"
+gem "russian", "~> 0.6.0"
+gem "caxlsx", "~> 3.2"
+gem "caxlsx_rails", "~> 0.6.3"
