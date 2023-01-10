@@ -1,34 +1,32 @@
----
-title: Rails Starter
-description: A Rails starter app using a PostgreSQL database
-tags:
-  - ruby
-  - rails
-  - postgresql
----
+Тестовое задание: автосервис
 
-# Rails Starter Example
+![](demo.png)
 
-This is a [Ruby on Rails](https://rubyonrails.org/) starter app that connects to a Railway Postgres database and supports [Action Cable](https://guides.rubyonrails.org/action_cable_overview.html).
+https://rails-production-8bd7.up.railway.app/
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/sibk1f)
+Задача:
+- спроектировать и реализовать приложение, позволяющее вести учёт заказов в автосервисе
+- опубликовать приложение на сервисе heroku.
 
-## ✨ Features
+Требования к реализации:
+- использовать сущности:
+	+ заказ
+		* дата создания
+		* имя заказчика
+	+ услуга
+		* название
+	+ категория услуги
+		* название
+	+ исполнитель услуги
+		* имя
+- в заказе может быть несколько услуг
+- при продаже услуги за ней закрепляется исполнитель, выбираемый из персонала автосервиса
 
-- Ruby
-- Rails
-- Postgres
-- Redis
+Требования к функционалу:
+- возможность создания, получения, редактирования, удаления для всех сущностей через интерфейс приложения
+- сортировка и фильтрация списка заказов по собственным полям, а так же по полям связанных сущностей: исполнитель услуги, категория услуги
+- возможность выгрузки результатов сортировки в excel, использовать гем caxlsx_rails
 
-## 💁‍♀️ How to use
-
-- [Create a Railway project with the Postgres plugin](https://railway.app/project?plugins=postgresql)
-- Connect to your Railway project with `railway link`
-- Install Ruby requirements `bundle install`
-- Migrate the database `railway run rake db:migrate`
-- Run Rails `railway run bin/rails server`
-
-## 📝 Notes
-
-This app was generated with the `rails new` command. Read more about Rails on
-their [official website](https://rubyonrails.org/)
+Требования к инструментам:
+- ruby v 2.6+
+- rails v 6+
